@@ -1,30 +1,31 @@
 if has('vim_starting')
     set nocompatible
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    execute pathogen#infect()
+    "set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'tristen/vim-sparkup'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'bling/vim-bufferline'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'jceb/vim-orgmode'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'airblade/vim-rooter'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'rodjek/vim-puppet'
-NeoBundleCheck
+"call neobundle#rc(expand('~/.vim/bundle/'))
+"NeoBundleFetch 'Shougo/neobundle.vim'
+"NeoBundle 'kien/ctrlp.vim'
+"NeoBundle 'tomasr/molokai'
+"NeoBundle 'tristen/vim-sparkup'
+"NeoBundle 'hail2u/vim-css3-syntax'
+"NeoBundle 'othree/html5.vim'
+"NeoBundle 'bling/vim-bufferline'
+"NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'bling/vim-airline'
+"NeoBundle 'majutsushi/tagbar'
+"NeoBundle 'jceb/vim-orgmode'
+"NeoBundle 'tpope/vim-speeddating'
+"NeoBundle 'airblade/vim-rooter'
+"NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'tpope/vim-surround'
+"NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'godlygeek/tabular'
+"NeoBundle 'rking/ag.vim'
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"NeoBundle 'rodjek/vim-puppet'
+"NeoBundleCheck
 
 " =Basic
 au BufWritePost .vimrc so ~/.vimrc

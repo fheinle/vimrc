@@ -4,6 +4,7 @@ if has('vim_starting')
 endif
 
 " =Basic
+" reload vimrc on changes
 au BufWritePost .vimrc so ~/.vimrc
 filetype plugin on
 filetype plugin indent on
@@ -13,7 +14,7 @@ set directory=~/.vimbackup
 " no viminfo
 set viminfo=""
 " use system clipboard
-set clipboard+=unnamed
+set clipboard=unnamedplus
 " tread line noise as keywords too
 set isk+=_,$,@,%,#,-
 " make file directory cwd
@@ -108,22 +109,10 @@ set backspace=indent,eol,start
 " let mapleader = "\<Space>"
 map <Space> <leader>
 " open with <space> o, write with <space> w
-nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
-" show nerdtree
-nnoremap <Leader>e :NERDTreeToggle<CR>
 " show tagbar
 nmap <Leader>t :TagbarToggle<CR>
-" copy/paste to/from system clipboard with <space>y/d/P
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-" enter visual mode with double <space>
-nmap <Leader><Leader> V
 " disable movement keys
 imap <up> <nop>
 nmap <up> <nop>
@@ -145,14 +134,9 @@ nmap <Leader>k :bprev<CR>:redraw<CR>
 " close the buffer
 nmap <Leader>d :bd<CR>
 " buffer list
-nmap <leader>b :buffers<CR>:buffer 
-nmap <silent><leader>B :CtrlPBuffer<CR>
+nmap <leader>b :buffers<CR>:buffer
 " close html tags
 imap <silent><C-_> </<C-x><C-o>
 " exit input mode by typing jj
 inoremap jj <Esc>
 map <silent><leader>f za<CR>
-
-" =Plugin configuration
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_use_caching = 0

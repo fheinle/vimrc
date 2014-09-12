@@ -1,0 +1,181 @@
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'tristen/vim-sparkup'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'jceb/vim-orgmode'
+NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'airblade/vim-rooter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'rodjek/vim-puppet'
+NeoBundleCheck
+
+" =Basic
+au BufWritePost .vimrc so ~/.vimrc
+filetype plugin on
+filetype plugin indent on
+" don't clutter working directories
+set backupdir=~/.vimbackup
+set directory=~/.vimbackup
+" no viminfo
+set viminfo=""
+" use system clipboard
+set clipboard+=unnamed
+" tread line noise as keywords too
+set isk+=_,$,@,%,#,-
+" make file directory cwd
+set autochdir
+
+" =Look
+" syntax highlighting
+syn on
+" always use dark background
+set background=dark
+" molokai theme
+colo molokai
+" remember to use Powerline font here for best effect
+set guifont=Source\ Code\ Pro\ For\ Powerline\ 10
+" assume 256 color terminal
+set t_Co=256
+" always show the status bar
+set laststatus=2
+" a = select for clipboard
+" e = show gtk tabs
+set guioptions=ae
+" show current line
+set cursorline
+" show line numbers
+set number
+" show relative line numbers around the current line
+set relativenumber
+" allow multiple buffers
+set hidden
+" keep at least 3 more lines visible
+set scrolloff=3
+" show menu on completion in command bar
+set wildmenu
+set wildignorecase
+set wildignore+=*.pyc,*.pyo,.git
+set wildmode=list:longest,full
+" which file extensions to ignore on completion
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.pyc,.pyo
+" don't repeat commands
+set noshowcmd
+let g:airline_powerline_fonts = 1
+if has('gui_running')
+    set lines=50 columns=84
+    set colorcolumn=80
+endif
+if !has('gui_running')
+    let g:airline_theme='powerlineish'
+    "let g:airline_left_sep=''
+    "let g:airline_right_sep=''
+    "let g:airline_section_z=''
+endif
+" how to show whitespace
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
+
+" =Searching
+" global replace by default
+set gdefault
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" =Editing
+" match brackets visually
+set showmatch
+" also match html tag brackets
+set matchpairs+=<:>
+" indentation
+set autoindent smartindent
+set expandtab smarttab
+set softtabstop=4 tabstop=4 shiftwidth=4
+set shiftround
+" german spelling, if enabled
+set spelllang=de
+" when formatting comments with :gq, recognize numbered lists, continue
+" comments and no line wrap
+set formatoptions=qrn1
+" reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" =Fodling
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
+" =Keyboard
+set backspace=indent,eol,start
+" take me to your leader
+" let mapleader = "\<Space>"
+map <Space> <leader>
+" open with <space> o, write with <space> w
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x :x<CR>
+" show nerdtree
+nnoremap <Leader>e :NERDTreeToggle<CR>
+" show tagbar
+nmap <Leader>t :TagbarToggle<CR>
+" copy/paste to/from system clipboard with <space>y/d/P
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+" enter visual mode with double <space>
+nmap <Leader><Leader> V
+" disable movement keys
+imap <up> <nop>
+nmap <up> <nop>
+imap <down> <nop>
+nmap <down> <nop>
+imap <left> <nop>
+nmap <left> <nop>
+imap <right> <nop>
+nmap <right> <nop>
+" scroll visual lines
+nnoremap j gj
+nnoremap k gk
+noremap j gj
+noremap k gk
+" buffer switching
+" <space>j for next buffer and <space>k for prev buffer
+nmap <Leader>j :bnext<CR>:redraw<CR>
+nmap <Leader>k :bprev<CR>:redraw<CR>
+" close the buffer
+nmap <Leader>d :bd<CR>
+" buffer list
+nmap <leader>b :buffers<CR>:buffer 
+nmap <silent><leader>B :CtrlPBuffer<CR>
+" close html tags
+imap <silent><C-_> </<C-x><C-o>
+" exit input mode by typing jj
+inoremap jj <Esc>
+map <silent><leader>f za<CR>
+
+" =Plugin configuration
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0

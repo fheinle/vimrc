@@ -25,10 +25,10 @@ set autochdir
 syn on
 " always use dark background
 set background=dark
-" molokai theme
-colo molokai
+" solarized theme
+colo solarized
 " remember to use Powerline font here for best effect
-set guifont=Source\ Code\ Pro\ For\ Powerline\ 10
+set guifont=Ubuntu\ Mono\ For\ Powerline\ 10
 " assume 256 color terminal
 set t_Co=256
 " always show the status bar

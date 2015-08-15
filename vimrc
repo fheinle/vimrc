@@ -28,7 +28,7 @@ set background=dark
 " solarized theme
 colo solarized
 " remember to use Powerline font here for best effect
-set guifont=Ubuntu\ Mono\ For\ Powerline\ 10
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 " assume 256 color terminal
 set t_Co=256
 " always show the status bar

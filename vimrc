@@ -26,7 +26,11 @@ syn on
 " always use dark background
 set background=dark
 " solarized theme
-colo solarized
+if has("gui running")
+    colo solarized
+else
+    colo desert
+endif
 " remember to use Powerline font here for best effect
 set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 " assume 256 color terminal

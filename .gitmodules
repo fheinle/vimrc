@@ -37,9 +37,12 @@
 [submodule "bundle/vim-puppet"]
 	path = bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet
-[submodule "bundle/unite"]
-	path = bundle/unite
-	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = git://github.com/chase/vim-ansible-yaml.git
+[submodule "bundle/vim-jinja2-syntax"]
+	path = bundle/vim-jinja2-syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git

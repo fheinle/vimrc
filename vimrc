@@ -59,7 +59,7 @@ set wildmode=list:longest,full
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.pyc,.pyo
 " don't repeat commands
 set noshowcmd
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 if has('gui_running')
     set lines=50 columns=84
     set colorcolumn=80

@@ -6,7 +6,6 @@ endif
 " =Basic
 " reload vimrc on changes
 au BufWritePost .vimrc so ~/.vimrc
-filetype plugin on
 filetype plugin indent on
 " don't clutter working directories
 set backupdir=~/.vimbackup

@@ -13,7 +13,9 @@ set directory=~/.vimbackup
 " no viminfo
 set viminfo=""
 " use system clipboard
-set clipboard=unnamedplus
+if has ('unnameplus')
+    set clipboard=unnamed,unnamedplus
+endif
 " tread line noise as keywords too
 set isk+=_,$,@,%,#,-
 " make file directory cwd

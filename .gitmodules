@@ -46,3 +46,9 @@
 [submodule "bundle/vim-jinja2-syntax"]
 	path = bundle/vim-jinja2-syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "bundle/utilsnips"]
+	path = bundle/utilsnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "bundle/badwolf"]
+	path = bundle/badwolf
+	url = https://github.com/sjl/badwolf.git

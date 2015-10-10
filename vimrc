@@ -147,3 +147,9 @@ imap <silent><C-_> </<C-x><C-o>
 " exit input mode by typing jj
 inoremap jj <Esc>
 map <silent><leader>f za<CR>
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'

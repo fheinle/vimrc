@@ -3,10 +3,11 @@ if has('vim_starting')
     execute pathogen#infect()
 endif
 
-" =Basic
+" Basic {{{
 " reload vimrc on changes
 au BufWritePost .vimrc so ~/.vimrc
 filetype plugin indent on
+set modelines=1
 " don't clutter working directories
 set backupdir=~/.vimbackup
 set directory=~/.vimbackup
@@ -20,8 +21,9 @@ endif
 set isk+=_,$,@,%,#,-
 " make file directory cwd
 set autochdir
+" }}}
 
-" =Look
+" Look {{{
 " syntax highlighting
 syn on
 " always use dark background
@@ -76,16 +78,18 @@ endif
 " how to show whitespace
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
+" }}}
 
-" =Searching
+" Searching {{{
 " global replace by default
 set gdefault
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+" }}}
 
-" =Editing
+" Editing {{{
 " match brackets visually
 set showmatch
 " also match html tag brackets
@@ -103,14 +107,16 @@ set formatoptions=qrn1
 " reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
+" }}}
 
-" =Fodling
+" Fodling {{{
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+" }}}
 
-" =Keyboard
+" Keyboard {{{
 set backspace=indent,eol,start
 " take me to your leader
 " let mapleader = "\<Space>"
@@ -147,9 +153,14 @@ imap <silent><C-_> </<C-x><C-o>
 " exit input mode by typing jj
 inoremap jj <Esc>
 map <silent><leader>f za<CR>
+" }}}
 
+" Plugin settings {{{
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0

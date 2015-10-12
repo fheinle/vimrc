@@ -28,13 +28,12 @@ set autochdir
 syn on
 " always use dark background
 set background=dark
-" solarized theme
-colo badwolf
-"if has("gui running")
-"    colo solarized
-"else
-"    colo desert
-"endif
+" theme
+if has("gui running")
+   colo badwolf
+else
+   colo desert
+endif
 " remember to use Powerline font here for best effect
 set guifont=Droid\ Sans\ Mono\ For\ Powerline\ 9
 " assume 256 color terminal
@@ -63,17 +62,10 @@ set wildmode=list:longest,full
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.pyc,.pyo
 " don't repeat commands
 set noshowcmd
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
+set colorcolumn=80
 if has('gui_running')
     set lines=50 columns=84
-    set colorcolumn=80
-    let g:airline_powerline_fonts = 1
-endif
-if !has('gui_running')
-    let g:airline_theme='powerlineish'
-    "let g:airline_left_sep=''
-    "let g:airline_right_sep=''
-    "let g:airline_section_z=''
 endif
 " how to show whitespace
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮

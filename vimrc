@@ -33,11 +33,7 @@ syn on
 set background=dark
 
 " theme
-if has("gui running")
-   colo badwolf
-else
-   colo desert
-endif
+colo desert
 
 " remember to use Powerline font here for best effect
 set guifont=Ubuntu\ Mono\ 10

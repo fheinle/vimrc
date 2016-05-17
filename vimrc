@@ -173,9 +173,6 @@ nmap <Leader>b :buffers<CR>:buffer
 " close html tags with ctrl shift _
 imap <silent><C-_> </<C-x><C-o>
 
-" exit input mode by typing jj
-inoremap jj <Esc>
-
 " toggle folds shortcut
 map <silent><leader>f za<CR>
 

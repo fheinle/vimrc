@@ -71,9 +71,6 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 " don't repeat commands
 set noshowcmd
 
-" use fancy characters for line art
-let g:airline_powerline_fonts = 1
-
 set colorcolumn=80
 
 if has('gui_running')

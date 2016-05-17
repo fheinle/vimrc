@@ -16,11 +16,6 @@ set directory=~/.vimbackup
 " no viminfo files
 set viminfo=""
 
-" use system clipboard
-if has ('unnameplus')
-    set clipboard=unnamed,unnamedplus
-endif
-
 " tread line noise as keywords too
 set isk+=_,$,@,%,#,-
 

@@ -176,6 +176,8 @@ imap <silent><C-_> </<C-x><C-o>
 " toggle folds shortcut
 map <silent><leader>f za<CR>
 
+map <silent><leader>h <Plug>GitGutterPrevHunk
+map <silent><leader>l <Plug>GitGutterNextHunk
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

@@ -36,7 +36,7 @@ set background=dark
 colo desert
 
 " remember to use Powerline font here for best effect
-set guifont=Ubuntu\ Mono\ 10
+set guifont=Hack\ 10
 
 " always show the status bar
 set laststatus=2

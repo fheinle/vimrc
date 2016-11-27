@@ -49,3 +49,9 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/mitsuhiko/vim-jinja
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+[submodule "bundle/jellybeans.vim"]
+	path = bundle/jellybeans.vim
+	url = git@github.com:nanotech/jellybeans.vim.git

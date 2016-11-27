@@ -152,6 +152,9 @@ nnoremap <Leader>x :x<CR>
 " show tagbar
 nmap <Leader>t :TagbarToggle<CR>
 
+" cd current dir
+nnoremap <Leader>c :cd %:p:h
+
 " disable movement keys
 imap <up> <nop>
 nmap <up> <nop>

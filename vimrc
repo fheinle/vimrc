@@ -191,4 +191,5 @@ map <silent><leader>h <Plug>GitGutterPrevHunk
 map <silent><leader>l <Plug>GitGutterNextHunk
 " }}}
 
+autocmd QuickFixCmdPost * copen
 " vim:foldmethod=marker:foldlevel=0

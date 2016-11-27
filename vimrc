@@ -33,13 +33,20 @@ syn on
 set background=dark
 
 " theme
-colo desert
+colo jellybeans
+
+let g:jellybeans_overrides = {
+\    'background': { 'guibg': '000000', 'ctermbg': 'none', '256ctermbg':'none' },
+\}
 
 " remember to use Powerline font here for best effect
 set guifont=Hack\ 10
 
 " always show the status bar
 set laststatus=2
+
+" statusbar layout
+set statusline=%f%m%r%h%w[%{&ff}]%y[%p%%][%04l,%04v]
 
 " a = select for clipboard
 " e = show gtk tabs
@@ -79,6 +86,7 @@ endif
 
 " how to show whitespace
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set list
 set showbreak=↪
 
 " }}}

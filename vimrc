@@ -192,4 +192,13 @@ map <silent><leader>l <Plug>GitGutterNextHunk
 " }}}
 
 autocmd QuickFixCmdPost * copen
+
+if executable("ag")
+        set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
+            set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
+nnoremap # :Ag<SPACE>
+
+
 " vim:foldmethod=marker:foldlevel=0

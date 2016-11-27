@@ -10,15 +10,9 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
 [submodule "bundle/vim-rooter"]
 	path = bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter
-[submodule "bundle/vim-puppet"]
-	path = bundle/vim-puppet
-	url = https://github.com/rodjek/vim-puppet
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = git://github.com/chase/vim-ansible-yaml.git
@@ -31,9 +25,6 @@
 [submodule "bundle/vim-tmux-navigator"]
 	path = bundle/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
-[submodule "bundle/vividchalk"]
-	path = bundle/vividchalk
-	url = git@github.com:tpope/vim-vividchalk.git
 [submodule "bundle/emmet"]
 	path = bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
@@ -49,9 +40,6 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/mitsuhiko/vim-jinja
-[submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion
 [submodule "bundle/jellybeans.vim"]
 	path = bundle/jellybeans.vim
 	url = git@github.com:nanotech/jellybeans.vim.git

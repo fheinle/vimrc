@@ -33,14 +33,14 @@ syn on
 set background=dark
 
 " theme
-colo jellybeans
+colo solarized
 
 let g:jellybeans_overrides = {
 \    'background': { 'guibg': '000000', 'ctermbg': 'none', '256ctermbg':'none' },
 \}
 
 " remember to use Powerline font here for best effect
-set guifont=Hack\ 10
+set guifont=Terminus\ 10
 
 " always show the status bar
 set laststatus=2
@@ -81,7 +81,7 @@ set noshowcmd
 set colorcolumn=80
 
 if has('gui_running')
-    set lines=50 columns=84
+    set lines=60 columns=90
 endif
 
 " how to show whitespace
@@ -191,14 +191,13 @@ map <silent><leader>h <Plug>GitGutterPrevHunk
 map <silent><leader>l <Plug>GitGutterNextHunk
 " }}}
 
-autocmd QuickFixCmdPost * copen
-
 if executable("ag")
         set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
             set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-nnoremap # :Ag<SPACE>
+nnoremap # :grep<SPACE>
 
+map <F4> :sp %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " vim:foldmethod=marker:foldlevel=0

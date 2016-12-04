@@ -43,3 +43,24 @@
 [submodule "bundle/jellybeans.vim"]
 	path = bundle/jellybeans.vim
 	url = git@github.com:nanotech/jellybeans.vim.git
+[submodule "bundle/vim-pandoc-syntax"]
+	path = bundle/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
+[submodule "bundle/vim-pandoc"]
+	path = bundle/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "bundle/vim-coloresque"]
+	path = bundle/vim-coloresque
+	url = git@github.com:gko/vim-coloresque.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/ranger"]
+	path = bundle/ranger
+	url = https://github.com/francoiscabrol/ranger.vim.git

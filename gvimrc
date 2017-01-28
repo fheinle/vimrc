@@ -1,2 +1,2 @@
-set numberwidth=5  "Good for files upto a million lines
+set numberwidth=3  "Good for files upto a thousand lines
 set columns=90

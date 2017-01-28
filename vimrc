@@ -200,4 +200,5 @@ nnoremap # :grep<SPACE>
 
 map <F4> :sp %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
+au BufRead,BufNewFile *.lco setfiletype tex
 " vim:foldmethod=marker:foldlevel=0

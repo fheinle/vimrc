@@ -40,7 +40,7 @@ let g:jellybeans_overrides = {
 \}
 
 " remember to use Powerline font here for best effect
-set guifont=Terminus\ 10
+set guifont=Terminus\ 12
 
 " always show the status bar
 set laststatus=2

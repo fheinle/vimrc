@@ -201,4 +201,18 @@ nnoremap # :grep<SPACE>
 map <F4> :sp %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 au BufRead,BufNewFile *.lco setfiletype tex
+
+" syntastic
+
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:styntastic_c_check_header = 1
+let g:syntastic_c_compiler_options = ' -ansi -pedantic -Wall -Wextra'
 " vim:foldmethod=marker:foldlevel=0

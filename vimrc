@@ -193,12 +193,15 @@ map <silent><leader>l <Plug>GitGutterNextHunk
 
 if executable("ag")
         set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
-            set grepformat=%f:%l:%c:%m,%f:%l:%m
+        set grepformat=%f:%l:%c:%m,%f:%l:%m
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+        let g:ctrlp_use_caching = 0
 endif
 
 nnoremap # :grep<SPACE>
 
 map <F4> :sp %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+map <c-o> :CtrlPBuffer<CR>
 
 au BufRead,BufNewFile *.lco setfiletype tex
 

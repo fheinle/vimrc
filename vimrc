@@ -2,10 +2,25 @@
 
 if has('vim_starting')
     set nocompatible
-    execute pathogen#infect()
 endif
 
-filetype plugin indent on
+" List of Plugins
+
+call plug#begin('~/.local/share/vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'othree/html5.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'vim-syntastic/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'pearofducks/ansible-vim'
+Plug 'gko/vim-coloresque'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()
 
 set modelines=1
 
@@ -26,24 +41,11 @@ set autochdir
 
 " Look {{{
 
-" syntax highlighting
-syn on
-
 " always use dark background
 set background=dark
 
-" theme
-colo solarized
-
-let g:jellybeans_overrides = {
-\    'background': { 'guibg': '000000', 'ctermbg': 'none', '256ctermbg':'none' },
-\}
-
 " remember to use Powerline font here for best effect
 set guifont=Terminus\ 12
-
-" always show the status bar
-set laststatus=2
 
 " statusbar layout
 set statusline=%f%m%r%h%w[%{&ff}]%y[%p%%][%04l,%04v]
@@ -63,11 +65,7 @@ set relativenumber
 " allow multiple buffers
 set hidden
 
-" keep at least 3 more lines visible
-set scrolloff=3
-
 " show menu on completion in command bar
-set wildmenu
 set wildignorecase
 set wildignore+=*.pyc,*.pyo,.git
 set wildmode=list:longest,full
@@ -85,7 +83,6 @@ if has('gui_running')
 endif
 
 " how to show whitespace
-set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set list
 set showbreak=↪
 
@@ -95,7 +92,6 @@ set showbreak=↪
 
 set ignorecase
 set smartcase
-set incsearch
 set hlsearch
 
 " global replace by default
@@ -110,8 +106,8 @@ set showmatch
 set matchpairs+=<:>
 
 " indentation
-set autoindent smartindent
-set expandtab smarttab
+set smartindent
+set expandtab
 set softtabstop=4 tabstop=4 shiftwidth=4
 set shiftround
 
@@ -138,8 +134,6 @@ set foldlevel=1
 " }}}
 
 " Keyboard {{{
-
-set backspace=indent,eol,start
 
 " take me to your leader
 let mapleader = ","

@@ -28,8 +28,8 @@ call plug#end()
 set modelines=1
 
 " don't clutter working directories
-set backupdir=~/.vimbackup
-set directory=~/.vimbackup
+set backupdir=~/.local/share/vim/backup
+set directory=~/.local/share/vim/backup
 
 " no viminfo files
 set viminfo=""

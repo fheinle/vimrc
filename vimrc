@@ -23,6 +23,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'rodjek/vim-puppet'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 set modelines=1
@@ -43,6 +44,9 @@ set autochdir
 " }}}
 
 " Look {{{
+
+" theme
+colo solarized8_dark_high
 
 " always use dark background
 set background=dark

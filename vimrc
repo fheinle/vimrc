@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.local/share/vim/plugged')
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-vinegar'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'othree/html5.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -20,6 +21,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'rodjek/vim-puppet'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 set modelines=1

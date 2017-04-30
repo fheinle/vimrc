@@ -47,9 +47,6 @@ set background=dark
 " remember to use Powerline font here for best effect
 set guifont=Terminus\ 12
 
-" statusbar layout
-set statusline=%f%m%r%h%w[%{&ff}]%y[%p%%][%04l,%04v]
-
 " a = select for clipboard
 " e = show gtk tabs
 set guioptions=ae

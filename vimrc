@@ -9,6 +9,9 @@ endif
 call plug#begin('~/.local/share/vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'othree/html5.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -16,7 +19,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'pearofducks/ansible-vim'
 Plug 'gko/vim-coloresque'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -24,6 +26,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'rodjek/vim-puppet'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'lifepillar/vim-solarized8'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 set modelines=1

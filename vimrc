@@ -50,13 +50,13 @@ set autochdir
 " Look {{{
 
 " theme
-colo solarized8_dark_high
+colo slate
 
 " always use dark background
 set background=dark
 
 " remember to use Powerline font here for best effect
-set guifont=Terminus\ 12
+set guifont=Ubuntu\ Mono\ 12
 
 " a = select for clipboard
 " e = show gtk tabs

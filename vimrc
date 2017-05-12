@@ -178,6 +178,10 @@ noremap k gk
 nmap <Leader>j :bnext<CR>:redraw<CR>
 nmap <Leader>k :bprev<CR>:redraw<CR>
 
+" save files using sudo if the editor is not running as root
+
+cmap w!! w !sudo tee > /dev/null %
+
 " close the buffer
 nmap <Leader>d :bd<CR>
 " buffer list
